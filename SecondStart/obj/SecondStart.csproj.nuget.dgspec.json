@@ -1,20 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\KonradWu\\Documents\\warehouse\\SecondStart\\SecondStart\\SecondStart.csproj": {}
+    "C:\\Users\\KonradWu\\Source\\Repos\\TotalBasics\\SecondStart\\SecondStart.csproj": {}
   },
   "projects": {
-    "C:\\Users\\KonradWu\\Documents\\warehouse\\SecondStart\\SecondStart\\SecondStart.csproj": {
+    "C:\\Users\\KonradWu\\Source\\Repos\\TotalBasics\\SecondStart\\SecondStart.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KonradWu\\Documents\\warehouse\\SecondStart\\SecondStart\\SecondStart.csproj",
+        "projectUniqueName": "C:\\Users\\KonradWu\\Source\\Repos\\TotalBasics\\SecondStart\\SecondStart.csproj",
         "projectName": "SecondStart",
-        "projectPath": "C:\\Users\\KonradWu\\Documents\\warehouse\\SecondStart\\SecondStart\\SecondStart.csproj",
+        "projectPath": "C:\\Users\\KonradWu\\Source\\Repos\\TotalBasics\\SecondStart\\SecondStart.csproj",
         "packagesPath": "C:\\Users\\KonradWu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KonradWu\\Documents\\warehouse\\SecondStart\\SecondStart\\obj\\",
+        "outputPath": "C:\\Users\\KonradWu\\Source\\Repos\\TotalBasics\\SecondStart\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\KonradWu\\AppData\\Roaming\\NuGet\\NuGet.Config",

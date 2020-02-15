@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
@@ -10,8 +10,8 @@ namespace SecondStart
 
         static void Main()
         {
-            DataGenerator generator = new DataGenerator();
-            int[] randoms = generator.GetArrayWithRandomNumbers();
+            var generator = new DataGenerator();
+            var randoms = generator.GetArrayWithRandomNumbers();
             Console.WriteLine("Wygenerowano tablicę");
             for (int i = 0; i < randoms.Length; i++)
             {
@@ -19,59 +19,59 @@ namespace SecondStart
             }
             Console.WriteLine();
 
-            NumbersChecker checker = new NumbersChecker();
-            int sumOfArray = checker.GetSumOfArrayElements(randoms);
+            var checker = new NumbersChecker();
+            var sumOfArray = checker.GetSumOfArrayElements(randoms);
             Console.WriteLine("Suma elementów z tablicy: ");
             Console.WriteLine(sumOfArray);
 
-            int multiplicationOfArray = checker.GetMultiplicationOfArrayElements(randoms);
+            var multiplicationOfArray = checker.GetMultiplicationOfArrayElements(randoms);
             Console.WriteLine("Iloczyn elementów z tablicy: ");
             Console.WriteLine(multiplicationOfArray);
 
-            int MinOfArray = checker.GetMinValue(randoms);
+            var minOfArray = checker.GetMinValue(randoms);
             Console.WriteLine("Wartosc minimalna : ");
-            Console.WriteLine(MinOfArray);
+            Console.WriteLine(minOfArray);
 
-            int MaxOfArray = checker.GetMaxValue(randoms);
+            var maxOfArray = checker.GetMaxValue(randoms);
             Console.WriteLine("Wartosc maksymalna: ");
-            Console.WriteLine(MaxOfArray);
+            Console.WriteLine(maxOfArray);
 
-            List<int> PrimeNumb = checker.GetPrimeNumbers(randoms);
+            var primeNumb = checker.GetPrimeNumbers(randoms);
             Console.WriteLine("Liczby pierwsze: ");
-            for (int x = 0; x < PrimeNumb.Count; x++)
+            for (int x = 0; x < primeNumb.Count; x++)
             {
-                Console.WriteLine(PrimeNumb[x] + " ");
+                Console.WriteLine(primeNumb[x] + " ");
             }
             Console.WriteLine();
 
-            List<int> EvenNumbers = checker.GetNumbersDivisibleBy2(randoms);
+            var evenNumbers = checker.GetNumbersDivisibleByTwo(randoms);
             Console.WriteLine("Liczby parzyste: ");
-            for (int y = 0; y < EvenNumbers.Count; y++)
+            for (int y = 0; y < evenNumbers.Count; y++)
             {
-                Console.WriteLine(EvenNumbers[y] + " ");
+                Console.WriteLine(evenNumbers[y] + " ");
             }
             Console.WriteLine();
 
-            List<int> OddNumbers = checker.GetOddNumbers(randoms);
+            var oddNumbers = checker.GetOddNumbers(randoms);
             Console.WriteLine("Liczby nieparzyste: ");
-            for (int z = 0; z < OddNumbers.Count; z++)
+            for (int z = 0; z < oddNumbers.Count; z++)
             {
-                Console.WriteLine(OddNumbers[z] + " ");
+                Console.WriteLine(oddNumbers[z] + " ");
             }
 
             Console.WriteLine();
 
-            ArrayDetails NewObject = new ArrayDetails();
-            NewObject.Array = randoms;
-            NewObject.LowestFound = MinOfArray;
-            NewObject.HighestFound = MaxOfArray;
-            NewObject.Sum = sumOfArray;
-            NewObject.Multiplication = multiplicationOfArray;
-            NewObject.Prime = PrimeNumb;
-            NewObject.OddNumbers = OddNumbers;
-            NewObject.EvenNumbers = EvenNumbers;
-            // ttuaj w podobny sposon jak zrobilem wyzej
-            //NewObject.Numbers = 
+            var arrayDetails = new ArrayDetails
+            {
+                Array = randoms,
+                LowestFound = minOfArray,
+                HighestFound = maxOfArray,
+                Sum = sumOfArray,
+                Multiplication = multiplicationOfArray,
+                Prime = primeNumb,
+                OddNumbers = oddNumbers,
+                EvenNumbers = evenNumbers
+            };
 
         }
     }

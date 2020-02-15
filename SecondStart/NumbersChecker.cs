@@ -10,32 +10,33 @@ namespace SecondStart
     {
         public int GetSumOfArrayElements(int[] array)
         {
-            int sum = 0;
+            var sum = 0;
             for (int i = 0; i < array.Length; i++)
             {
-                sum = sum + array[i];
+
+                sum += array[i];
             }
             return sum;
         }
         public int GetMultiplicationOfArrayElements(int[] array)
         {
-            int multiplication = 1;
+            var multiplication = 1;
             for (int i = 0; i < array.Length; i++)
             {
-                multiplication = multiplication * array[i];
+
+                multiplication *= array[i];
             }
             return multiplication;
         }
         public int GetMinValue(int[] array)
         {
-            int lowestFound = array[0];
-          
-            for (int x = 0; x < array.Length; x++)
-            {
+            var lowestFound = array[0];
 
-                if (array[x] < lowestFound)
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] < lowestFound)
                 {
-                    lowestFound = array[x];
+                    lowestFound = array[i];
                 }
             }
             return lowestFound;
@@ -43,26 +44,26 @@ namespace SecondStart
         }
         public int GetMaxValue(int[] array)
         {
-            int highestFound = array[0];
+            var highestFound = array[0];
 
-            for (int x = 0; x < array.Length; x++)
+            for (int i = 0; i < array.Length; i++)
             {
 
-                if (array[x] > highestFound)
+                if (array[i] > highestFound)
                 {
-                    highestFound = array[x];
+                    highestFound = array[i];
                 }
             }
             return highestFound;
         }
         public List<int> GetPrimeNumbers(int[] array)
         {
-            List<int> arrayOfPrimeNumbers = new List<int>();
-            for (int c = 0; c < array.Length; c++)
+            var arrayOfPrimeNumbers = new List<int>();
+            for (int i = 0; i < array.Length; i++)
             {
-                if (IsPrime(array[c]))
+                if (IsPrime(array[i]))
                 {
-                    arrayOfPrimeNumbers.Add(array[c]);
+                    arrayOfPrimeNumbers.Add(array[i]);
                 }
             }
             return arrayOfPrimeNumbers;
@@ -70,9 +71,7 @@ namespace SecondStart
 
         public bool IsPrime(int numberToCheck)
         {
-            int i;
-
-            for (i = 2; i < numberToCheck; i++)
+            for (int i = 2; i < numberToCheck; i++)
             {
                 if (numberToCheck % i == 0)
                 {
@@ -81,34 +80,34 @@ namespace SecondStart
             }
             return true;
         }
-        public List<int> GetNumbersDivisibleBy2(int[] array)
-        {
-            List<int> ArrayOfEvenNumbers = new List<int>();
-            int b = 2;
 
-            for (int y = 0; y < array.Length; y++)
+        public List<int> GetNumbersDivisibleByTwo(int[] array)
+        {
+            var arrayOfEvenNumbers = new List<int>();
+
+            for (int i = 0; i < array.Length; i++)
             {
-                if (array[y] % b == 0)
+                if (array[i] % 2 == 0)
                 {
-                    ArrayOfEvenNumbers.Add(array[y]);
+                    arrayOfEvenNumbers.Add(array[i]);
                 }
             }
-            return ArrayOfEvenNumbers;
+            return arrayOfEvenNumbers;
         }
+
 
         public List<int> GetOddNumbers(int[] array)
         {
-            List<int> ArrayOfOddNumbers = new List<int>();
-            int b = 2;
+            var arrayOfOddNumbers = new List<int>();
 
-            for (int z = 0; z < array.Length; z++)
+            for (int i = 0; i < array.Length; i++)
             {
-                if (array[z] % b == 1)
+                if (array[i] % 2 == 1)
                 {
-                    ArrayOfOddNumbers.Add(array[z]);
+                    arrayOfOddNumbers.Add(array[i]);
                 }
             }
-            return ArrayOfOddNumbers;
+            return arrayOfOddNumbers;
         }
     }
 }

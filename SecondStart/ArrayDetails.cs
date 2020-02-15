@@ -15,13 +15,5 @@ namespace SecondStart
         public List<int> OddNumbers { get; set; }
         public List<int> EvenNumbers { get; set; }
 
-
-        //I jako składowe będą tam: utworzona tablica jako array, 
-        //    najmniejszą wartość jako INT, 
-        //największa wartość jako array
-
-        //    na końcu funkcji main tworzysz nowy obiekt i do poszczególnych składowych przypisujesz wartości które już wyliczyłes
-        //    przy pomocy Numberschecker. 
-        //    Klasa nie musi mieć żadnych metod, ArrayDetails to klasa której obiekty przechowuja tylko informacje
     }
 }
